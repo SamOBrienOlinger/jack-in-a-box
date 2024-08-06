@@ -13,25 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/images/jack-four.jpg'
     ];
 
-    // box.addEventListener('click', () => {
-    //     let randomJack = jackList[Math.floor(Math.random() * jackList.length)];
-    //     jackImage.src = randomJack;
-    //     box.classList.add('opened');
-    //     jack.classList.remove('hidden');
-    //     shut.classList.remove('hidden');
-    // });
+    let lastBox; // To keep track of the last box shown
 
     box.addEventListener('click', () => {
         const randomBox = Math.random() < 0.5 ? andy : justin;
         showRandomJack(randomBox);
     });
 
-    const showRandomJack = (box) => {
+    const showRandomJack = (selectedBox) => {
         let randomJack = jackList[Math.floor(Math.random() * jackList.length)];
         jackImage.src = randomJack;
-        box.classList.remove('hidden');
+        
+        if (lastBox) {
+            lastBox.classList.add('hidden'); // Hide the last box
+        }
+
+        selectedBox.classList.remove('hidden'); // Show the current box
         jack.classList.remove('hidden');
         shut.classList.remove('hidden');
+
+        lastBox = selectedBox; // Update the last box shown
     };
 
     shut.addEventListener('click', () => {
@@ -39,23 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
         shut.classList.add('hidden');
         box.classList.remove('opened');
         
+        if (lastBox) {
+            lastBox.classList.add('hidden'); // Ensure the last box is hidden
+        }
+
         andy.classList.add('hidden');
         justin.classList.add('hidden');
     });
 
-    // let andyBox = [
-    //     'assets/images/jack-one.webp',
-    //     'assets/images/jack-two.webp',
-    //     'assets/images/jack-three.webp',
-    //     'assets/images/jack-four.jpg'
-    // ]
-
-    // let justinBox = [
-    //     'assets/images/jack-one.webp',
-    //     'assets/images/jack-two.webp',
-    //     'assets/images/jack-three.webp',
-    //     'assets/images/jack-four.jpg'
-
-    // ]
+    const refreshPage = document.getElementById("refresh");
+    refreshPage.addEventListener("click", (e) => {
+        document.location.reload();
+    });
 });
-
