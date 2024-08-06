@@ -18,6 +18,16 @@ main {
     align-items: center;
 }
 
+#andy-and-justin {
+
+    background-image: url(./images/andy-justin.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100px;
+}
+
 /* Styles for the box */
 .box {
     width: 100px;
@@ -79,7 +89,7 @@ main {
 }
 
 #about-div {
-    margin-top: 2rem;
+    margin-left: 50%;
 
 }
 
