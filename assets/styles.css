@@ -1,0 +1,97 @@
+/* Initial hidden state for elements */
+.hidden {
+    display: none;
+}
+
+/* Center the main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container to hold both the box and shut button */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the box */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    perspective: 600px; /* Add perspective for 3D effect */
+    transition: transform 0.5s ease-in-out;
+}
+
+.box.opened p {
+    display: none; /* Hide the 'Box' text when opened */
+}
+
+.box.opened .jack {
+    display: block;
+    animation: jackExit 1s forwards;
+}
+
+/* Style for the jack content */
+.jack {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Animation for the jack exiting the box */
+@keyframes jackExit {
+    from {
+        transform: translateX(-50%) translateY(50%);
+    }
+    to {
+        transform: translateX(-50%) translateY(-150px);
+    }
+}
+
+/* Style for the images to make them the same size */
+#jackImage {
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Style for the shut button */
+#shut {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+#about-div {
+    margin-top: 2rem;
+
+}
+
+#about {
+    height: 100%; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* #andy-box {
+
+}
+
+#justin-box {
+
+} */
