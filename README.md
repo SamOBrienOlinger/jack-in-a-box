@@ -14,7 +14,7 @@ A small interactive browser toy that reveals a randomly selected “Jack” when
 
 ## Getting started
 
-Requires a browser and a local HTTP server. Python 3 provides one without installing application packages.
+Requires Git, a browser and a local HTTP server. Python 3 provides one without installing application packages.
 
 ```bash
 git clone https://github.com/SamOBrienOlinger/jack-in-a-box.git
