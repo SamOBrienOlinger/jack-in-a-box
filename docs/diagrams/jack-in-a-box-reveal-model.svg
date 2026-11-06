@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383 295" width="383" height="295" role="img" aria-labelledby="erd-title erd-desc"><title id="erd-title">Jack in a Box reveal model</title><desc id="erd-desc">Each reveal uses one illustrated box and one randomly selected Jack image.</desc><metadata data-format="mermaid">erDiagram
+    accTitle: Jack in a Box reveal model
+    accDescr: Each reveal uses one illustrated box and one randomly selected Jack image.
+    Box ||..o{ Reveal : "appears in"
+    "Jack Image" ||..o{ Reveal : "appears in"
+
+    Box {
+        string elementId
+    }
+    "Jack Image" {
+        path src
+    }</metadata><style>:root {
+  --panel:#f7fafc; --border:#c7d8e4; --heading:#14354b; --accent:#128276;
+  --card:#174b62; --card-title:#fff; --text:#183448; --muted:#486278;
+  --row:#fff; --stripe:#edf5f9; --rule:#9ab7c9; --line:#486980;
+  --label-bg:#e2f3ee; --label-text:#195649;
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    --panel:#101c2a; --border:#3c566c; --heading:#eaf5fe; --accent:#53c7b2;
+    --card:#25526b; --card-title:#fff; --text:#e0edf6; --muted:#b4cadd;
+    --row:#192b3c; --stripe:#1e3448; --rule:#52738a; --line:#a3becf;
+    --label-bg:#1b3c41; --label-text:#c3f4e8;
+  }
+}
+text { font-family:Arial, Helvetica, sans-serif; }
+.panel { fill:var(--panel); stroke:var(--border); }
+.accent { fill:var(--accent); }
+.graphic-title { fill:var(--heading); font-weight:700; font-size:16px; }
+.entityBox { fill:var(--card); stroke:var(--rule); }
+.entity-heading { fill:var(--card-title); font-size:16px; font-weight:700; text-anchor:middle; dominant-baseline:middle; }
+.attributeBoxOdd { fill:var(--row); stroke:var(--rule); stroke-width:.8; }
+.attributeBoxEven { fill:var(--stripe); stroke:var(--rule); stroke-width:.8; }
+.attribute-text { fill:var(--text); font-size:13.6px; dominant-baseline:middle; }
+.attribute-type, .attribute-comment { fill:var(--muted); }
+.attribute-key { fill:var(--label-text); font-weight:700; }
+.relationshipLine { fill:none; stroke:var(--line); stroke-width:1.25; }
+.relationshipLabel { fill:var(--label-text); font-size:14px; font-weight:600; text-anchor:middle; dominant-baseline:middle; }
+.relationshipLabelBox { fill:var(--label-bg); }
+marker path { stroke:var(--line); fill:none; }
+marker circle { stroke:var(--line); fill:var(--panel); }</style><defs><marker orient="auto" markerHeight="18" markerWidth="18" refY="9" refX="0" id="ONLY_ONE_START" markerUnits="userSpaceOnUse"><path d="M9,0 L9,18 M15,0 L15,18" fill="none" stroke="gray"/></marker><marker orient="auto" markerHeight="36" markerWidth="57" refY="18" refX="39" id="ZERO_OR_MORE_END" markerUnits="userSpaceOnUse"><circle r="6" cy="18" cx="9" fill="white" stroke="gray"/><path d="M21,18 Q39,0 57,18 Q39,36 21,18" fill="none" stroke="gray"/></marker></defs><rect class="panel" x=".5" y=".5" width="382" height="294" rx="14"/><rect class="accent" x="22" y="18" width="26" height="3" rx="1.5"/><text class="graphic-title" x="22" y="40" aria-hidden="true"><tspan x="22" y="40">Jack in a Box reveal model</tspan></text><g transform="translate(7.4 49)"><path marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" stroke-dasharray="8,8" d="M77.143,73.841L77.143,82.257C77.143,90.672,77.143,107.503,89.448,124.251C101.752,141,126.362,157.667,138.666,166L150.971,174.333" class="er relationshipLine"/><path marker-start="url(#ONLY_ONE_START)" marker-end="url(#ZERO_OR_MORE_END)" stroke-dasharray="8,8" d="M291.243,74.333L291.243,82.667C291.243,91,291.243,107.667,278.939,124.333C266.634,141,242.025,157.667,229.72,166L217.416,174.333" class="er relationshipLine"/><g transform="translate(20,20.4921875 )"><rect height="53.34895833333333" width="114.28645833333333" y="0" x="0" class="er entityBox"/><text transform="translate(57.143229166666664,13.841145833333332)" y="0" x="0" class="entity-heading">Box</text><rect height="25.666666666666664" width="43.916666666666664" y="27.682291666666664" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,40.515625)" y="0" x="0" class="attribute-text attribute-type">string</text><rect height="25.666666666666664" width="70.36979166666667" y="27.682291666666664" x="43.916666666666664" class="er attributeBoxOdd"/><text transform="translate(49.25,40.515625)" y="0" x="0" class="attribute-text">elementId</text></g><g transform="translate(130.19336128234863,174.33333206176758 )"><rect height="45" width="108" y="0" x="0" class="er entityBox"/><text transform="translate(54,22.5)" y="0" x="0" class="entity-heading">Reveal</text></g><g transform="translate(234.28646087646484,20 )"><rect height="54.33333333333333" width="113.9140625" y="0" x="0" class="er entityBox"/><text transform="translate(56.95703125,14.333333333333332)" y="0" x="0" class="entity-heading">Jack Image</text><rect height="25.666666666666664" width="61.02955627441406" y="28.666666666666664" x="0" class="er attributeBoxOdd"/><text transform="translate(5.333333333333333,41.5)" y="0" x="0" class="attribute-text attribute-type">path</text><rect height="25.666666666666664" width="52.88450622558594" y="28.666666666666664" x="61.02955627441406" class="er attributeBoxOdd"/><text transform="translate(66.36288960774739,41.5)" y="0" x="0" class="attribute-text">src</text></g><rect height="18" width="84.72" y="125.30596923828125" x="55.83" class="er relationshipLabelBox" rx="6"/><text y="134.30596923828125" x="98.1912612915039" class="er relationshipLabel">appears in</text><rect height="18" width="84.72" y="125.48873901367188" x="227.7" class="er relationshipLabelBox" rx="6"/><text y="134.48873901367188" x="270.05462646484375" class="er relationshipLabel">appears in</text></g></svg>

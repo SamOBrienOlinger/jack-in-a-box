@@ -16,20 +16,7 @@ A small interactive browser toy that reveals a randomly selected “Jack” when
 
 Opening the box selects one of two illustrated boxes and independently chooses one of four Jack images. The page shows one reveal at a time and hides it when the box is closed. [Page markup](index.html) · [Reveal logic](assets/script2.js)
 
-```mermaid
-erDiagram
-    accTitle: Jack in a Box reveal model
-    accDescr: Each reveal uses one illustrated box and one randomly selected Jack image.
-    Box ||..o{ Reveal : "appears in"
-    "Jack Image" ||..o{ Reveal : "appears in"
-
-    Box {
-        string elementId
-    }
-    "Jack Image" {
-        path src
-    }
-```
+[![Each reveal uses one illustrated box and one randomly selected Jack image.](docs/diagrams/jack-in-a-box-reveal-model.svg)](docs/diagrams/jack-in-a-box-reveal-model.svg)
 
 ## Getting started
 
