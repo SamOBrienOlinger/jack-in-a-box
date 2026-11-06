@@ -4,13 +4,32 @@ A small interactive browser toy that reveals a randomly selected “Jack” when
 
 **HTML · CSS · JavaScript**
 
-[Getting started](#getting-started) · [Repository guide](#repository-guide) · [Checks](#checks-and-review) · [Credits](#credits-and-reuse)
+[Getting started](#getting-started) · [Data model](#entity-relationship-diagram) · [Repository guide](#repository-guide) · [Checks](#checks-and-review) · [Credits](#credits-and-reuse)
 
 ## What you can explore
 
 - Click the box to reveal a name or phrase.
 - Close or reset the box for another try.
 - An About page and illustrated presentation.
+
+## Entity relationship diagram
+
+Opening the box selects one of two illustrated boxes and independently chooses one of four Jack images. The page shows one reveal at a time and hides it when the box is closed. [Page markup](index.html) · [Reveal logic](assets/script2.js)
+
+```mermaid
+erDiagram
+    accTitle: Jack in a Box reveal model
+    accDescr: Each reveal uses one illustrated box and one randomly selected Jack image.
+    Box ||..o{ Reveal : "appears in"
+    "Jack Image" ||..o{ Reveal : "appears in"
+
+    Box {
+        string elementId
+    }
+    "Jack Image" {
+        path src
+    }
+```
 
 ## Getting started
 
